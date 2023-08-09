@@ -1,0 +1,20 @@
+.footer {
+    background-color: #1b62c5;
+    color: hwb(0 100% 0%);
+    padding: 0px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    border: none;
+    overflow: hidden;
+  }
+
+.footer .contact-info {
+  flex-direction: column;
+}
+
+.footer .contact-info > * {
+  margin: 0.5rem;
+}
+ 

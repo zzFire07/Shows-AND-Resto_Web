@@ -1,0 +1,59 @@
+/* Establecer el navbar por encima del header */
+.navbar {
+  background-color: transparent; /* Color de fondo con transparencia */
+
+  /* Agregar propiedades para posicionar el navbar */
+  z-index: 9999; /* Valor alto para asegurar que esté por encima del header */
+  border: none; /* Quitar el borde */
+}
+
+.navbar .toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.navbar .logo-container {
+  width: 75%;
+}
+
+.navbar .logo {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar .logo:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 501px) {
+  .navbar .nameRest {
+    font-size: 1rem;
+  }
+}
+
+.navbar .buttons {
+  display: flex;
+  gap: 0.33rem;
+  flex-direction: column;
+}
+
+@media (max-width: 501px) {
+  .navbar .buttons button{
+    font-size: 0.5rem !important ;
+
+  }
+}
+
+/* Estilos para el texto de los botones */
+.navbar .buttons button {
+  color: rgb(233, 229, 229); /* Color del texto en blanco para mejorar la visibilidad */
+  background-color:gray
+}
+.iconMenu{
+  color: rgb(19, 1, 1);
+  border-radius: 50%;
+}
