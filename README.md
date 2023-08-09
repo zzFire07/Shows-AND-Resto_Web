@@ -1,6 +1,8 @@
 # SHOWS & RESTO PROJECT - FRONT-END
 
-Repositorio solo del front-end del proyecto "Shows & Resto".
+Repositorio solo del Front-End del proyecto "Shows & Resto".
+
+Simula traer los datos de una base de datos. Tiene hecha la conexion para un posible Back-End.
 
 ## Cómo clonar y preparar el proyecto
 
@@ -45,7 +47,7 @@ En el directorio del proyecto, se pueden correr:
 ### `npm start`
 
 Corre la aplicación en el modo de development.\
-Se abre [http://localhost:3000](http://localhost:3000) para visualizarlo en el navegador.
+Se abre [http://localhost:3000] para visualizarlo en el navegador.
 
 La página se recargará (localmente) cuando se hagan cambios.\
 También se podrá ver cualquier error en la consola.
