@@ -29,43 +29,43 @@ const RESTAURANTES = [
 const SHOWS = [
   {
       image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show1", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      name: "Show chino", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   },
   {
-      image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show2", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      image: "https://m.media-amazon.com/images/I/71DGcdOmwJL._AC_UF894,1000_QL80_.jpg",
+      name: "Show Dr Strange", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   },
   {
-      image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show3", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      image: "https://i.pinimg.com/736x/7b/9e/6b/7b9e6be214c85bf068788d082f7d3137.jpg",
+      name: "Show kill bill", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   },
   {
-      image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show4", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      image: "https://i.pinimg.com/564x/09/0c/92/090c9262f9899224a531353c9743a06d.jpg",
+      name: "Show breaking bad", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   },
   {
-      image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show5", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      image: "https://miro.medium.com/v2/resize:fit:1080/1*-jgFlueHLvFwm9pg8v5LoQ.jpeg",
+      name: "Show Zulu", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   },
   {
-      image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show6", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      image: "https://i.pinimg.com/736x/42/b7/af/42b7af43dcebc5968c491b9fe344548c.jpg",
+      name: "Show Gear 5", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   },
   {
-      image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show7", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/poster-design-template-e0789f3a7a5d2e495ec7f30dbbf4b8a3_screen.jpg?ts=1636997055",
+      name: "Show navidad", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   },
   {
-      image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show8", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/vintage-sci-fi-movie-poster-phone-wallpaper-i-design-template-ff2d932d08de7a99dc1850881dae6375_screen.jpg?ts=1729467039",
+      name: "Show alienigenas", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   },
   {
-      image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show9", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      image: "https://imgcdn.stablediffusionweb.com/2024/12/6/60b40414-503f-44b3-b568-ae9002bcda39.jpg",
+      name: "Show Matrix", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   },
   {
-      image: "https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpg",
-      name: "Show10", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
+      image: "https://i.pinimg.com/736x/3d/53/64/3d53640c580c447e5af17809791bab7e.jpg",
+      name: "Show Spider-Man", location:"Punta del Este", link: "https://www.mcdonalds.com.uy"
   }
 ]
 
@@ -74,27 +74,32 @@ function App() {
   const [shows, setShows]=useState([])
 
   useEffect(()=>{
+    // Se intenta traer informacion desde la base de datos, si no se puede se setea la informacion provisoria.
     axios.get('http://localhost:3000/findAllRestaurant',{
       headers: {
         'Access-Control-Allow-Origin' : '*'
       },
       responseType: "json",
     }).then((response) => {
+    // Si el back-end esta corriendo correctamente, se setea la informacion de la base de datos.
       setRestaurante(response.data);
       console.log('restaurantes', response.data)
     }).catch((error) => {
+    // Si el back-end no esta corriendo, se setea la informacion provisoria.
       setRestaurante(RESTAURANTES);
     })
 
-
+    // Se intenta traer informacion desde la base de datos, si no se puede se setea la informacion provisoria.
     axios.get('http://localhost:3000/shows/findAllShow',{
       headers: {
         'Access-Control-Allow-Origin' : '*'
       },
       responseType: "json",
     }).then((response) => {
+    // Si el back-end esta corriendo correctamente, se setea la informacion de la base de datos.
       setShows(response.data);
     }).catch((error) => {
+    // Si el back-end no esta corriendo, se setea la informacion provisoria.
       setShows(SHOWS);
     })
 

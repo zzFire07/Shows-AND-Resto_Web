@@ -8,11 +8,9 @@ Simula traer los datos de una base de datos. Tiene hecha la conexion para un pos
 
 ### 1) Clonar el repositorio:
 
-**1.1:** Nos situamos en la ubicación donde se desee clonar el repositorio (con "cd [nombre de carpeta]" cambiamos la ubicación desde la terminal).
+**1.1:** Nos situamos en la ubicación donde se desee clonar el repositorio (con ```cd [nombre de carpeta]``` cambiamos la ubicación desde la terminal).
 
-**1.2:** Usar el comando *"git clone [link SSH o HTTPS]"* para clonar el repositorio.
-
-**1.3:** Al clonar el repositorio y situarnos en su directorio, por defecto nos sitúa en la rama principal (main). con el comando *"git checkout Dev"* pasamos a la rama de desarrollo.
+**1.2:** Usar el comando ```git clone [link SSH o HTTPS]``` para clonar el repositorio.
 
 ### 2) Versión compatible de Node:
 
@@ -36,9 +34,9 @@ Simula traer los datos de una base de datos. Tiene hecha la conexion para un pos
 
 ### 3) Instalar carpeta node_modules:
 
-**3.1** Para correr el proyecto, necesitamos una carpeta node_modules que cada desarrollador debe instalar. Para comenzar, abrimos la terminal y nos situamos en la carpeta del proyecto: *"/gdr_front-end"*.
+**3.1** Para correr el proyecto, necesitamos una carpeta node_modules, esta se debe instalar. Para comenzar, abrimos la terminal y nos situamos en la carpeta del proyecto.
 
-**3.2** Una vez situados en la carpeta del proyecto, corremos el comando: *"npm install"* para instalar la carpeta node_modules.
+**3.2** Una vez situados en la carpeta del proyecto, corremos el comando: ```npm install``` para instalar la carpeta node_modules.
 
 ## Cómo probar el proyecto (SIN BACK-END)
 
