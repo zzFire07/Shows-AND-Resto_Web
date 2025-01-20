@@ -101,6 +101,7 @@ const Layout = ({restaurantes, shows}) => {
     return <div>
        
         <NavBar /> 
+        <div style={{marginTop:"5rem"}}></div>
         <Carousel/>
 
         <div className="hero-section">
