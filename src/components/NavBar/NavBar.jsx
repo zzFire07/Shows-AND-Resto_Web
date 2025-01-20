@@ -37,7 +37,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar">
-      <AppBar sx={SXAPPBAR}>
+      <AppBar className="appbar" sx={SXAPPBAR}>
         <Toolbar className="toolbar">
            {/* Ícono de usuario */}
           <div className="logo">

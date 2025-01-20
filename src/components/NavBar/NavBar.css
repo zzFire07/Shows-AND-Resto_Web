@@ -1,10 +1,14 @@
 /* Establecer el navbar por encima del header */
 .navbar {
-  background-color: transparent; /* Color de fondo con transparencia */
-
   /* Agregar propiedades para posicionar el navbar */
   z-index: 9999; /* Valor alto para asegurar que esté por encima del header */
   border: none; /* Quitar el borde */
+}
+
+.navbar .appbar {
+  background-color: beige;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 .navbar .toolbar {
