@@ -14,11 +14,11 @@ const ListView = ({cards, type}) => {
 
   const theme = useTheme();
 
-  const itemsSMdw = useMediaQuery(theme.breakpoints.down('541'));
-  const itemsSM = useMediaQuery(theme.breakpoints.between('540','md'));
+  const itemsSMdw = useMediaQuery(theme.breakpoints.down('461'));
+  const itemsSM = useMediaQuery(theme.breakpoints.between('600','md'));
   const itemsMDup = useMediaQuery(theme.breakpoints.between('md', 'lg'));
 
-  const itemsPerPage = itemsMDup ? 4 : itemsSM ? 3 : itemsSMdw ? 2 : 5;
+  const itemsPerPage = itemsMDup ? 3 : itemsSM ? 2 : itemsSMdw ? 1 : 4;
 
   const handleNextGroup = () => {
     setCurrentGroupIndex((prevIndex) => prevIndex + 1);
@@ -38,6 +38,13 @@ const ListView = ({cards, type}) => {
   return (
     <Box className="media-container" style={{overflow: "hidden" }}>
     <Box className={`media-scroller ${currentGroupIndex > 0 ? 'animate-previous' : ''} ${currentGroupIndex < Math.floor(cardData.length / itemsPerPage) - 1 ? 'animate-next' : ''}`}>
+
+        {currentGroupIndex > 0 && (
+          <Box className="previous" onClick={handlePreviousGroup} aria-label="previous">
+            <ChevronLeftIcon />
+          </Box>
+        )}
+
         <Box className="media-group" id={`group-${currentGroupIndex + 1}`}>
           {
             type === "restaurant" ?
@@ -65,35 +72,14 @@ const ListView = ({cards, type}) => {
               />
               ))
           }
-
-              { currentGroupIndex+ itemsPerPage <= cardData.length && (
-                <Box className="next" aria-label="next">
-                  <ChevronRightIcon />
-                </Box>
-              )}
-              { currentGroupIndex+ itemsPerPage < cardData.length && (
-                <Box className="next" onClick={handleNextGroup} aria-label="next">
-                  <ChevronRightIcon />
-                </Box>
-              )}
         </Box>
 
-        <Box className="media-group" id={`group-${currentGroupIndex + 1}`}></Box>
-            {currentGroupIndex >= 0 && (
-              <Box className="previous" aria-label="previous">
-                <ChevronLeftIcon />
-              </Box>
-            )}
-            {currentGroupIndex > 0 && (
-              <Box className="previous" onClick={handlePreviousGroup} aria-label="previous">
-                <ChevronLeftIcon />
-              </Box>
-            )}
-        <Box className="navigation-indicators">
-          {Array.from({ length: Math.ceil(cardData.length / itemsPerPage) }, (_, index) => (
-            <Box key={index}></Box>
-          ))}
-        </Box>
+          { currentGroupIndex+ itemsPerPage < cardData.length && (
+            <Box className="next" onClick={handleNextGroup} aria-label="next">
+              <ChevronRightIcon />
+            </Box>
+          )}
+
       </Box>
     </Box>
   );
