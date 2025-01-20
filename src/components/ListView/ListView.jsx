@@ -14,8 +14,8 @@ const ListView = ({cards, type}) => {
 
   const theme = useTheme();
 
-  const itemsSMdw = useMediaQuery(theme.breakpoints.down('461'));
-  const itemsSM = useMediaQuery(theme.breakpoints.between('600','md'));
+  const itemsSMdw = useMediaQuery(theme.breakpoints.down('500'));
+  const itemsSM = useMediaQuery(theme.breakpoints.between('501','md'));
   const itemsMDup = useMediaQuery(theme.breakpoints.between('md', 'lg'));
 
   const itemsPerPage = itemsMDup ? 3 : itemsSM ? 2 : itemsSMdw ? 1 : 4;
