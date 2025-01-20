@@ -78,11 +78,11 @@ const RestaurantDetail = () => {
                                 <div className='div-details'>
                                     <h4> {element.horarioApertura}</h4>
                                     <h4> {element.horarioCierre}</h4>
-                                    <h3> {element.direccion} </h3>
-                                    <h3> {element.telefono}</h3>
-                                    <h3> {element.estadoLocal}</h3>
-                                    <h3> {element.tipoEntrega}</h3>
-                                    <h2> {element.descripcion}</h2>
+                                    <h4> {element.direccion} </h4>
+                                    <h4> {element.telefono}</h4>
+                                    <h4> {element.estadoLocal}</h4>
+                                    <h4> {element.tipoEntrega}</h4>
+                                    <h4> {element.descripcion}</h4>
                                 </div>
                             )}   
                         )}
