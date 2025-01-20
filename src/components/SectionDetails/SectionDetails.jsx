@@ -17,7 +17,7 @@ const SectionDetails = ({sectionName, section}) => {
       <div className="section-hero-section">
         <ImageList className="section-image-list">
         <ImageListItem key="Subheader" cols={2}>
-          <ListSubheader className="list-sub-header" component="div">{sectionName}</ListSubheader>
+          <ListSubheader style={{fontSize: "5rem"}} className="list-sub-header" component="div">{sectionName}</ListSubheader>
         </ImageListItem>
         {section.map((item) => (
           <ImageListItem key={item.image} className='section-image-item'>

@@ -1,6 +1,7 @@
 .section-main-div {
     height: 100vh;
     width: 100%;
+    margin-top: 5rem;
 }
 
 .section-hero-section {
@@ -16,11 +17,16 @@
 }
 
 .section-image-list {
-    width: 50rem;
+    width: 100%;
     margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
 }
 
 .section-image-item {
+    width: 50%;
     aspect-ratio: 1;
 }
 
@@ -30,10 +36,11 @@
 
 .list-sub-header {
     background-color: white;
-    border-width: 0.1rem;
+    border: 0.1rem solid black;
+    border-radius: 0.2rem;
+    padding: 0.6rem;
     border-style: inset;
-    border-color: black;
-    font-size: larger;
     text-transform: capitalize;
     color: black;
+    margin-bottom: 4rem;
 }
