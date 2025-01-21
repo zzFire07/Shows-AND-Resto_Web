@@ -55,7 +55,9 @@
   position: absolute !important;
   width: 1rem;
   height: 50%; /* Ajusta el alto según tu diseño */
-  padding: 1rem;
+  padding: 0 !important;
+  padding-left: 0.6rem !important;
+  padding-right: 0.6rem !important;
   background: rgb(0 0 0 / 0.5); /* Cambia el valor de opacidad para que sea visible */
   color: white; /* Ajusta el color de la flecha */
   font-size: 1.5rem; /* Ajusta el tamaño de la flecha */
