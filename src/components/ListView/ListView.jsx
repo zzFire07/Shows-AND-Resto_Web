@@ -37,7 +37,7 @@ const ListView = ({cards, type}) => {
   
   return (
     <Box className="media-container" style={{overflow: "hidden" }}>
-    <Box justifyItems={"legacy"} className={`media-scroller ${currentGroupIndex > 0 ? 'animate-previous' : ''} ${currentGroupIndex < Math.floor(cardData.length / itemsPerPage) - 1 ? 'animate-next' : ''}`}>
+    <Box className={`media-scroller ${currentGroupIndex > 0 ? 'animate-previous' : ''} ${currentGroupIndex < Math.floor(cardData.length / itemsPerPage) - 1 ? 'animate-next' : ''}`}>
 
         {currentGroupIndex > 0 && (
           <Box className="previous" onClick={handlePreviousGroup} aria-label="previous">

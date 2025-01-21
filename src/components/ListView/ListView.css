@@ -51,10 +51,10 @@
 }
 .next,
 .previous {
-  display: flex;
+  display: flex !important;
   align-items: center !important;
   z-index: 10;
-  position: absolute;
+  position: absolute !important;
   width: 1rem;
   height: 50%; /* Ajusta el alto según tu diseño */
   padding: 1rem;
@@ -71,23 +71,16 @@
   background: rgb(0 0 0 / 0.8); /* Cambia el color de fondo al pasar el cursor por encima */
 }
 
-/* Ajusta la posición de las flechas según tu diseño */
-.next {
-  right: 2rem;
-}
 
 .previous {
-  left: 2rem;
-}
-.previous {
-  left: 0;
-  top: 0;
-  bottom: 0;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
 }
 .next {
-  right: 0;
-  top: 0;
-  bottom: 0;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
 }
 .animate-next {
   animation: slideRight 0.9s ease-in-out;
