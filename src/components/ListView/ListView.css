@@ -13,6 +13,7 @@
   grid-auto-flow: column;
   transition: transform 0.3s ease-in-out;
   justify-items: center;
+
 }
 .media-group {
   transition: transform 0.3s ease-in-out; /* Agregar una transición suave de 0.3 segundos */
@@ -46,7 +47,7 @@
 .media-element > img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit:fill
 }
 .next,
 .previous {
