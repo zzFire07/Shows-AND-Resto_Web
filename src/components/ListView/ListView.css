@@ -52,7 +52,7 @@
 .next,
 .previous {
   display: flex;
-  align-items: center;
+  align-items: center !important;
   z-index: 10;
   position: absolute;
   width: 1rem;
@@ -63,7 +63,7 @@
   font-size: 1.5rem; /* Ajusta el tamaño de la flecha */
   cursor: pointer;
   transition: opacity 0.3s ease-in-out; /* Agrega una transición de opacidad suave */
-  align-self: center;
+  align-self: center !important;
 }
 
 .next:hover,
