@@ -2,17 +2,17 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  align-self: center;
+  align-self: center !important;
   margin-bottom: 5rem;
-  justify-content: center;
+  justify-content: center !important;
 }
 .media-scroller,
 .media-group {
   display: grid;
   gap: 0.25rem;
-  grid-auto-flow: column;
+  grid-auto-flow: column !important;
   transition: transform 0.3s ease-in-out;
-  justify-items: center;
+  justify-items: center !important;
 
 }
 .media-group {
